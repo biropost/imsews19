@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+
+  imsews19:
+    container_name: imsews19
+    tty: true
+    working_dir: /var/www/html/imsews19
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+    volumes:
+    - ./:/var/www/html/imsews19
+    networks:
+      - imsenet
+
+  postgres:
+    image: postgres:12-alpine
+    environment:
+      - POSTGRES_PASSWORD=imsews19
+    ports:
+    - "5432:5432"
+    networks:
+      - imsenet
+
+#  mongodb:
+#    image: mongodb:3.6-xenial
+#    networks:
+#      - imsenet
+
+networks:
+  imsenet:

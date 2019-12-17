@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "imsews19",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "an imse project.",
     "keywords": [
         "framework",
         "laravel"
