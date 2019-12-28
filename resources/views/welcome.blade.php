@@ -11,98 +11,37 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+              integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-        </div>
-        <div>
+    <div class="container">
+        <br>
+        <h1>NBA</h1>
+        <hr>
+        <br>
+        <br>
             <form id='searchform' method='get'>
-                <a href='index.php'>Alle Spieler</a> ---
-                Suche nach Team ID:
-                <input id='search' name='search' type='text' size='20' value='<?php if (isset($_GET['search'])) echo $_GET['search']; ?>' />
-                <input id='submit' type='submit' value='Los!' />
+                <div class="form-group row">
+                    <a class="col-2" href='index.php'>Alle Spieler</a>
+                    <label class="col-4" for="search">Suche nach Team ID:</label>
+                    <input id='search' class="form-control col-5" name='search' type='text' size='20' value='<?php if (isset($_GET['search'])) echo $_GET['search']; ?>' />
+                    <div class="col-1">
+                        <input id='submit' class="btn btn-primary" type='submit' value='Los!' />
+                    </div>
+                </div>
             </form>
-        </div>
         <?php
         // check if search view of list view
         if (isset($_GET['search'])) {
             $results = DB::table('spieler')->where('tid', $_GET['search'])->get();
-            //$sql = "SELECT * FROM Spieler WHERE TID = '" . $_GET['search'] . "'";
         } else {
             $results = DB::table('spieler')->get();
-            //$results = DB::select('select * from spieler');
-            //$sql = "select * from spieler";
         }
-
-        // execute sql statement
         ?>
-        <table style='border: 1px solid #DDDDDD'>
+        <br>
+        <div class="row">
+        <table class="table">
             <thead>
             <tr>
                 <th>Spieler ID</th>
@@ -127,5 +66,7 @@
             @endforeach
             </tbody>
         </table>
+        </div>
+    </div>
     </body>
 </html>
