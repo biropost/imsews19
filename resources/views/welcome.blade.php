@@ -82,8 +82,8 @@
 
         </div>
         <div>
-            <form id='searchform' action='nba1.php' method='get'>
-                <a href='nba1.php'>Alle Spieler</a> ---
+            <form id='searchform' method='get'>
+                <a href='index.php'>Alle Spieler</a> ---
                 Suche nach Team ID:
                 <input id='search' name='search' type='text' size='20' value='<?php if (isset($_GET['search'])) echo $_GET['search']; ?>' />
                 <input id='submit' type='submit' value='Los!' />
@@ -92,7 +92,7 @@
         <?php
         // check if search view of list view
         if (isset($_GET['search'])) {
-            $results = DB::select('select * from users where id = :id', ['id' => 1]);
+            $results = DB::table('spieler')->where('tid', $_GET['search'])->get();
             //$sql = "SELECT * FROM Spieler WHERE TID = '" . $_GET['search'] . "'";
         } else {
             $results = DB::table('spieler')->get();
