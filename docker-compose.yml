@@ -13,7 +13,7 @@ services:
       - "8080:8080"
       - "8443:8443"
     volumes:
-    - ./:/var/www/html/imsews19
+      - ./:/var/www/html/imsews19
     networks:
       - imsenet
 

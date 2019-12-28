@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>lalala</title>
+        <title>nba</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -79,22 +80,52 @@
                 </div>
             @endif
 
-            <div class="content">
-                <div class="title m-b-md">
-                    lalala
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
         </div>
+        <div>
+            <form id='searchform' action='nba1.php' method='get'>
+                <a href='nba1.php'>Alle Spieler</a> ---
+                Suche nach Team ID:
+                <input id='search' name='search' type='text' size='20' value='<?php if (isset($_GET['search'])) echo $_GET['search']; ?>' />
+                <input id='submit' type='submit' value='Los!' />
+            </form>
+        </div>
+        <?php
+        // check if search view of list view
+        if (isset($_GET['search'])) {
+            $results = DB::select('select * from users where id = :id', ['id' => 1]);
+            //$sql = "SELECT * FROM Spieler WHERE TID = '" . $_GET['search'] . "'";
+        } else {
+            $results = DB::table('spieler')->get();
+            //$results = DB::select('select * from spieler');
+            //$sql = "select * from spieler";
+        }
+
+        // execute sql statement
+        ?>
+        <table style='border: 1px solid #DDDDDD'>
+            <thead>
+            <tr>
+                <th>Spieler ID</th>
+                <th>Name</th>
+                <th>Größe</th>
+                <th>Gewicht</th>
+                <th>Trikotnr</th>
+                <th>Position</th>
+                <th>Team ID</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach($results as $data)
+                <tr>
+                    <td>{{ $data->id }}</td>
+                    <td>{{ $data->name }}</td>
+                    <td>{{ $data->groesse }}</td>
+                    <td>{{ $data->gewicht }}</td>
+                    <td>{{ $data->trikotnr }}</td>
+                    <td>{{ $data->position }}</td>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
     </body>
 </html>
