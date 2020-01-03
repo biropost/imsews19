@@ -16,6 +16,28 @@ sudo docker-compose up
 connecting to the docker container:
 docker exec -it imsews19 /bin/bash
 
+## Connect to the docker-container
+ 
+Use this to execute commands inside the running docker container.
+This is required for all `php artisan` commands.
+ 
+```shell script
+ docker exec -it imsews19 /bin/bash
+```
+
+## Create all database tables
+
+```shell script
+php artisan migrate
+```
+
+## Seed the Database
+ 
+```shell script
+php artisan db:seed
+```
+ 
+
 
 ## About Laravel
 

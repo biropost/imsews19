@@ -23,7 +23,7 @@
         <br>
             <form id='searchform' method='get'>
                 <div class="form-group row">
-                    <a class="col-2" href='index.php'>Alle Spieler</a>
+                    <a class="col-2" href=''>Alle Spieler</a>
                     <label class="col-4" for="search">Suche nach Team ID:</label>
                     <input id='search' class="form-control col-5" name='search' type='text' size='20' value='<?php if (isset($_GET['search'])) echo $_GET['search']; ?>' />
                     <div class="col-1">
@@ -31,14 +31,7 @@
                     </div>
                 </div>
             </form>
-        <?php
-        // check if search view of list view
-        if (isset($_GET['search'])) {
-            $results = DB::table('spieler')->where('tid', $_GET['search'])->get();
-        } else {
-            $results = DB::table('spieler')->get();
-        }
-        ?>
+
         <br>
         <div class="row">
         <table class="table">
@@ -54,14 +47,15 @@
             </tr>
             </thead>
             <tbody>
-            @foreach($results as $data)
+            @foreach($players as $player)
                 <tr>
-                    <td>{{ $data->id }}</td>
-                    <td>{{ $data->name }}</td>
-                    <td>{{ $data->groesse }}</td>
-                    <td>{{ $data->gewicht }}</td>
-                    <td>{{ $data->trikotnr }}</td>
-                    <td>{{ $data->position }}</td>
+                    <td>{{ $player->id }}</td>
+                    <td>{{ $player->first_name }} {{ $player->last_name }}</td>
+                    <td>{{ $player->height }}</td>
+                    <td>{{ $player->weight }}</td>
+                    <td>{{ $player->number }}</td>
+                    <td>{{ $player->position }}</td>
+                    <td>{{ $player->team_id }}</td>
                 </tr>
             @endforeach
             </tbody>

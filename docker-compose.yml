@@ -10,8 +10,8 @@ services:
       context: ./docker
       dockerfile: Dockerfile
     ports:
-      - "8080:8080"
-      - "8443:8443"
+      - "8080:80"
+      - "8443:443"
     volumes:
       - ./:/var/www/html/imsews19
     networks:
