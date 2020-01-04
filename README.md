@@ -7,14 +7,28 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-laravel dev:
-php artisan serve
+## Using composer
+```shell script
+composer install
+```
 
-starting with docker:
+## Laravel key generate
+Assumes a .env APP_KEY= line. 
+Rename the .env.example file to .env and run this command.
+
+```shell script
+php artisan key:generate
+```
+
+## Docker commands
+```shell script
+docker-compose up --build
+# to build the container
+
 sudo docker-compose up
+# starting with docker
+```
 
-connecting to the docker container:
-docker exec -it imsews19 /bin/bash
 
 ## Connect to the docker-container
  
@@ -22,7 +36,7 @@ Use this to execute commands inside the running docker container.
 This is required for all `php artisan` commands.
  
 ```shell script
- docker exec -it imsews19 /bin/bash
+ sudo docker exec -it imsews19 /bin/bash
 ```
 
 ## Create all database tables
@@ -36,8 +50,33 @@ php artisan migrate
 ```shell script
 php artisan db:seed
 ```
- 
+## Serving Laravel
+for development and testing purposes
+```shell script
+php artisan serve
+## or for a different port than 8000
+php artisan serve --port=8080
+```
+## the https Webserver
+After running docker-compose up, the webserver will now run on:
+https://localhost:8443/
 
+
+## the .env file
+copy the env.example file and adapt it to your environment.
+The env_billie_example file was used by me and serves as another example .env file for this project.
+
+## errors while serving
+### the storage folder
+Should no longer be an issue but an alternative fix is:
+```shell script
+The stream or file "/var/www/html/imsews19/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied
+```
+```shell script
+sudo chown -R $USER:www-data storage
+chmod -R 775 storage
+```
+# Information about Laravel
 
 ## About Laravel
 
