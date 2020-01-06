@@ -29,7 +29,7 @@
         </ul>
             <form id='searchform' method='get'>
                 <div class="form-group row">
-                    <a class="col-2" href=''>Alle Spieler</a>
+                    <a class="col-2" href=''>Alle Teams</a>
                     <label class="col-4" for="search">Suche nach Team ID:</label>
                     <input id='search' class="form-control col-5" name='search' type='text' size='20' value='<?php if (isset($_GET['search'])) echo $_GET['search']; ?>' />
                     <div class="col-1">
@@ -43,25 +43,21 @@
         <table class="table">
             <thead>
             <tr>
-                <th>Spieler ID</th>
-                <th>Name</th>
-                <th>Größe</th>
-                <th>Gewicht</th>
-                <th>Trikotnr</th>
-                <th>Position</th>
                 <th>Team ID</th>
+                <th>Name</th>
+                <th>HomeCourt</th>
+                <th>HeadCoach</th>
+                <th>Founding Year</th>
             </tr>
             </thead>
             <tbody>
-            @foreach($players as $player)
+            @foreach($teams as $team)
                 <tr>
-                    <td>{{ $player->id }}</td>
-                    <td>{{ $player->first_name }} {{ $player->last_name }}</td>
-                    <td>{{ $player->height }}</td>
-                    <td>{{ $player->weight }}</td>
-                    <td>{{ $player->number }}</td>
-                    <td>{{ $player->position }}</td>
-                    <td>{{ $player->team_id }}</td>
+                    <td>{{ $team->id }}</td>
+                    <td>{{ $team->name }}</td>
+                    <td>{{ $team->home_court }}</td>
+                    <td>{{ $team->head_coach }}</td>
+                    <td>{{ $team->founding_year}}</td>
                 </tr>
             @endforeach
             </tbody>

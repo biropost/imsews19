@@ -2,11 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93d15b22-7077-4da7-b633-c4051780428c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/env_billie_example.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Contract.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Game.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Referee.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_12_29_220020_create_contracts_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_12_29_220025_create_referees_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_12_29_220030_create_games_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_12_29_220035_create_teams_play_games_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/ContractSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/GameSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/RefereeSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/nba1.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/PlayerPerformance.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Sponsor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_29_220015_create_player_performances_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_29_220015_create_sponsors_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/PlayerPerformanceSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/SponsorSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,12 +144,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views" />
+      <recent name="$PROJECT_DIR$/database/migrations" />
+      <recent name="$PROJECT_DIR$/database/seeds" />
+      <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -173,11 +189,31 @@
       <workItem from="1577465566331" duration="18881000" />
       <workItem from="1578081225440" duration="3513000" />
       <workItem from="1578145724069" duration="1795000" />
+      <workItem from="1578253234443" duration="887000" />
+      <workItem from="1578254524371" duration="296000" />
+      <workItem from="1578254824620" duration="780000" />
+      <workItem from="1578255611791" duration="976000" />
+      <workItem from="1578256595895" duration="2286000" />
+      <workItem from="1578258981296" duration="5056000" />
+      <workItem from="1578272834859" duration="1700000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -192,10 +228,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="290" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.800@0.0.1280.800" timestamp="1577665932318" />
-    <state x="0" y="0" width="1280" height="800" key="CommitChangelistDialog2" timestamp="1577751945600">
+    <state x="0" y="0" width="1280" height="800" key="CommitChangelistDialog2" timestamp="1578274799702">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="0" y="0" width="1280" height="800" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1577751945600" />
+    <state x="0" y="0" width="1280" height="800" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1578274799702" />
     <state x="100" y="100" width="1080" height="600" key="DiffContextDialog" timestamp="1577671760286">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -233,9 +269,14 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="379" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1577539319321" />
-    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1576605105120">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state x="298" y="35" width="683" height="729" key="find.popup" timestamp="1578267790377">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
+    <state x="298" y="35" width="683" height="729" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1578267790377" />
+    <state x="407" y="175" width="670" height="516" key="search.everywhere.popup" timestamp="1578272136732">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="407" y="175" width="670" height="516" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1578272136732" />
     <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1576605105120" />
   </component>
 </project>
