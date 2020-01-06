@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTeamsPlayGamesTable extends Migration
+class CreatePlayersHaveSponsorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,13 @@ class CreateTeamsPlayGamesTable extends Migration
      */
     public function up()
     {
-        Schema::create('teamsPlayGames', function (Blueprint $table) {
+        Schema::create('playersHaveSponsors', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->integer('team1_id');
-            $table->integer('team2_id');
-            $table->integer('game_id');
-            $table->foreign('team1_id')->references('id')->on('teams');
-            $table->foreign('team2_id')->references('id')->on('teams');
-            $table->foreign('game_id')->references('id')->on('games');
+            $table->integer('player_id');
+            $table->integer('sponsor_id');
+            $table->foreign('player_id')->references('id')->on('players');
+            $table->foreign('sponsor_id')->references('id')->on('sponsors');
         });
     }
 

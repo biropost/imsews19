@@ -2,23 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93d15b22-7077-4da7-b633-c4051780428c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Contract.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Game.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Referee.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_12_29_220020_create_contracts_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_12_29_220025_create_referees_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_12_29_220030_create_games_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_12_29_220035_create_teams_play_games_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/ContractSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/GameSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/RefereeSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/nba1.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_12_29_220040_players_have_sponsors_games_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/PlayerPerformance.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Sponsor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_29_220015_create_player_performances_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_29_220015_create_sponsors_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/PlayerPerformanceSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/SponsorSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_29_220035_create_teams_play_games_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_29_220035_create_teams_play_games_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/RefereeSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/RefereeSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,14 +131,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/migrations" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/database/migrations" />
+      <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/database/seeds" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$" />
@@ -195,8 +182,16 @@
       <workItem from="1578255611791" duration="976000" />
       <workItem from="1578256595895" duration="2286000" />
       <workItem from="1578258981296" duration="5056000" />
-      <workItem from="1578272834859" duration="1700000" />
+      <workItem from="1578272834859" duration="2153000" />
     </task>
+    <task id="LOCAL-00001" summary="Added classes">
+      <created>1578274827062</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578274827063</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +212,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Added classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added classes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1149" y="336" width="571" height="433" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578077441689">
@@ -228,10 +225,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="290" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.800@0.0.1280.800" timestamp="1577665932318" />
-    <state x="0" y="0" width="1280" height="800" key="CommitChangelistDialog2" timestamp="1578274799702">
+    <state x="0" y="0" width="1280" height="800" key="CommitChangelistDialog2" timestamp="1578274826497">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="0" y="0" width="1280" height="800" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1578274799702" />
+    <state x="0" y="0" width="1280" height="800" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1578274826497" />
     <state x="100" y="100" width="1080" height="600" key="DiffContextDialog" timestamp="1577671760286">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
