@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93d15b22-7077-4da7-b633-c4051780428c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_12_29_220040_players_have_sponsors_games_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_29_220035_create_teams_play_games_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_29_220035_create_teams_play_games_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/RefereeSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/RefereeSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +180,7 @@
       <workItem from="1578255611791" duration="976000" />
       <workItem from="1578256595895" duration="2286000" />
       <workItem from="1578258981296" duration="5056000" />
-      <workItem from="1578272834859" duration="2153000" />
+      <workItem from="1578272834859" duration="3088000" />
     </task>
     <task id="LOCAL-00001" summary="Added classes">
       <created>1578274827062</created>
@@ -191,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578274827063</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added classes">
+      <created>1578275073050</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1578275073050</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,10 +230,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="290" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.800@0.0.1280.800" timestamp="1577665932318" />
-    <state x="0" y="0" width="1280" height="800" key="CommitChangelistDialog2" timestamp="1578274826497">
+    <state x="0" y="0" width="1280" height="800" key="CommitChangelistDialog2" timestamp="1578275072649">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="0" y="0" width="1280" height="800" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1578274826497" />
+    <state x="0" y="0" width="1280" height="800" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1578275072649" />
     <state x="100" y="100" width="1080" height="600" key="DiffContextDialog" timestamp="1577671760286">
       <screen x="0" y="0" width="1280" height="800" />
     </state>

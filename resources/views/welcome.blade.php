@@ -13,23 +13,33 @@
         <!-- Styles -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
               integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </head>
     <body>
     <div class="container">
         <br>
         <h1>NBA</h1>
         <hr>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Use-Cases
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Use-Case 1</a>
+                <a class="dropdown-item" href="#">Use-Case 2</a>
+                <a class="dropdown-item" href="#">Use-Case 3 (elaborate)</a>
+                <a class="dropdown-item" href="#">Use-Case 4 (reporting)</a>
+            </div>
+        </div>
         <br>
         <br>
-        <ul>
-            <li><a href="nba1.php">Test</a></li>
-            <li><a href="#">Test</a></li>
-            <li><a href="#">Test</a></li>
-            <li><a href="#">Test</a></li>
-        </ul>
             <form id='searchform' method='get'>
                 <div class="form-group row">
-                    <a class="col-2" href=''>Alle Spieler</a>
+                    <!--<a class="col-2" href='welcome.blade.php'>Alle Spieler</a>-->
                     <label class="col-4" for="search">Suche nach Team ID:</label>
                     <input id='search' class="form-control col-5" name='search' type='text' size='20' value='<?php if (isset($_GET['search'])) echo $_GET['search']; ?>' />
                     <div class="col-1">
