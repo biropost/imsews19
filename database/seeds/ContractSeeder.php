@@ -20,7 +20,7 @@ class ContractSeeder extends Seeder
                     'type' => "Max-Contract",
                     'number' => random_int(0, 99),
                     'team_id' => $team->id,
-                    'player_id' => $players.at(random_int(0,count($players)))->id,
+                    'player_id' => $players[random_int(0,count($players)-1)]->id,
                 ]);
                 try {
                     $contract->save();

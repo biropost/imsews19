@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93d15b22-7077-4da7-b633-c4051780428c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Referee.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Referee.php" afterDir="false" />
+    <list default="true" id="93d15b22-7077-4da7-b633-c4051780428c" name="Default Changelist" comment="Updated welcome.blade.php">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UseCase2Controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UseCase3Controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UseCase4Controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/TeamsPlayGames.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/TeamsPlayGamesSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go-pear.phar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/usecase3.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/usecase4.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Player.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Player.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_29_220005_create_players_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_29_220010_create_players_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_29_220010_create_team_performances_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_29_220026_create_team_performances_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_29_220015_create_sponsors_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_29_220005_create_sponsors_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_29_220030_create_games_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_29_220030_create_games_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_29_220035_create_teams_play_games_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_29_220035_create_teams_play_games_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_29_220040_players_have_sponsors_games_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/ContractSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ContractSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/GameSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/GameSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/PlayerSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PlayerSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/nba1.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usecase2.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,17 +150,21 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/migrations" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/database/migrations" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views" />
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers" />
       <recent name="$PROJECT_DIR$/database/seeds" />
       <recent name="$PROJECT_DIR$/app" />
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/resources/views" />
+      <recent name="$PROJECT_DIR$/database/migrations" />
     </key>
   </component>
   <component name="RunManager">
@@ -179,7 +205,9 @@
       <workItem from="1578255611791" duration="976000" />
       <workItem from="1578256595895" duration="2286000" />
       <workItem from="1578258981296" duration="5056000" />
-      <workItem from="1578272834859" duration="3156000" />
+      <workItem from="1578272834859" duration="4585000" />
+      <workItem from="1578344613817" duration="1596000" />
+      <workItem from="1578346774114" duration="13955000" />
     </task>
     <task id="LOCAL-00001" summary="Added classes">
       <created>1578274827062</created>
@@ -202,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578276120303</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Referee class updated">
+      <created>1578276146061</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1578276146061</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,7 +260,9 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Added classes" />
     <MESSAGE value="DropDown Menu added" />
-    <option name="LAST_COMMIT_MESSAGE" value="DropDown Menu added" />
+    <MESSAGE value="Referee class updated" />
+    <MESSAGE value="Updated welcome.blade.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated welcome.blade.php" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1149" y="336" width="571" height="433" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578077441689">
@@ -237,10 +274,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="290" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.800@0.0.1280.800" timestamp="1577665932318" />
-    <state x="0" y="0" width="1280" height="800" key="CommitChangelistDialog2" timestamp="1578276119835">
+    <state x="0" y="0" width="1280" height="800" key="CommitChangelistDialog2" timestamp="1578277604956">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="0" y="0" width="1280" height="800" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1578276119835" />
+    <state x="0" y="0" width="1280" height="800" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1578277604956" />
     <state x="100" y="100" width="1080" height="600" key="DiffContextDialog" timestamp="1577671760286">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -278,10 +315,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="379" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1577539319321" />
-    <state x="298" y="35" width="683" height="729" key="find.popup" timestamp="1578267790377">
+    <state x="298" y="35" width="683" height="729" key="find.popup" timestamp="1578360170201">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="298" y="35" width="683" height="729" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1578267790377" />
+    <state x="298" y="35" width="683" height="729" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1578360170201" />
     <state x="407" y="175" width="670" height="516" key="search.everywhere.popup" timestamp="1578272136732">
       <screen x="0" y="0" width="1280" height="800" />
     </state>

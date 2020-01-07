@@ -108,6 +108,7 @@ class PlayerSeeder extends Seeder
         $lastNamesCount = count($lastNames);
         $positionsCount = count($positions);
         $teams = DB::table('teams')->select('id')->get();
+        $sponsors = DB::table('sponsors')->select('id')->get();
         foreach ($teams as $team) {
             for ($i = 0; $i < 50; $i++) {
                 $player = new \App\Player([
@@ -118,6 +119,7 @@ class PlayerSeeder extends Seeder
                     'weight' => random_int(70, 130),
                     'number' => random_int(0, 99),
                     'team_id' => $team->id,
+                    'sponsor_id' => $sponsors[random_int(0,count($sponsors)-1)]->id,
                 ]);
                 try {
                     $player->save();

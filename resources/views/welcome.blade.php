@@ -29,18 +29,18 @@
                 Use-Cases
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Use-Case 1</a>
-                <a class="dropdown-item" href="#">Use-Case 2</a>
-                <a class="dropdown-item" href="#">Use-Case 3 (elaborate)</a>
-                <a class="dropdown-item" href="#">Use-Case 4 (reporting)</a>
+                <a class="dropdown-item" href="#">Use-Case 1 - Players in a Team</a>
+                <a class="dropdown-item" href="#">Use-Case 2 - Players and their Sponsors</a>
+                <a class="dropdown-item" href="#">Use-Case 3 - Teams playing Games (main use-case)</a>
+                <a class="dropdown-item" href="#">Use-Case 4 - Teamperformances in Games (reporting)</a>
             </div>
         </div>
         <br>
         <br>
             <form id='searchform' method='get'>
                 <div class="form-group row">
-                    <!--<a class="col-2" href='welcome.blade.php'>Alle Spieler</a>-->
-                    <label class="col-4" for="search">Suche nach Team ID:</label>
+                    <a class="col-2" href='http://127.0.0.1:8000/#'>Alle Spieler</a>
+                    <label class="col-3" for="search">Suche nach Team ID:</label>
                     <input id='search' class="form-control col-5" name='search' type='text' size='20' value='<?php if (isset($_GET['search'])) echo $_GET['search']; ?>' />
                     <div class="col-1">
                         <input id='submit' class="btn btn-primary" type='submit' value='Los!' />

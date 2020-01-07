@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'HomeController@home');
+Route::get('/usecase2.blade.php', 'UseCase2Controller@home');

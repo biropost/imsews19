@@ -18,8 +18,10 @@ class CreateGamesTable extends Migration
             $table->timestamps();
             $table->integer('team1_pts');
             $table->integer('team2_pts');
-            $table->integer('referee_id');
+            $table->unsignedBigInteger('referee_id');
+            $table->unsignedBigInteger('performance_id');
             $table->foreign('referee_id')->references('id')->on('referees');
+            $table->foreign('performance_id')->references('id')->on('team_performances');
         });
     }
 

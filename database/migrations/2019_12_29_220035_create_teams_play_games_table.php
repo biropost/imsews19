@@ -16,8 +16,8 @@ class CreateTeamsPlayGamesTable extends Migration
         Schema::create('teamsPlayGames', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->integer('team1_id');
-            $table->integer('team2_id');
+            $table->unsignedBigInteger('team1_id');
+            $table->unsignedBigInteger('team2_id');
             $table->integer('game_id');
             $table->foreign('team1_id')->references('id')->on('teams');
             $table->foreign('team2_id')->references('id')->on('teams');
@@ -32,6 +32,6 @@ class CreateTeamsPlayGamesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('playersHaveSponsors');
+        Schema::dropIfExists('teamsPlayGames');
     }
 }
