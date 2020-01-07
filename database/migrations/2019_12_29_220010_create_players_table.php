@@ -23,7 +23,9 @@ class CreatePlayersTable extends Migration
             $table->integer('number');
             $table->string('position');
             $table->unsignedBigInteger('team_id');
+            $table->unsignedBigInteger('sponsor_id');
             $table->foreign('team_id')->references('id')->on('teams');
+            $table->foreign('sponsor_id')->references('id')->on('sponsors');
         });
     }
 

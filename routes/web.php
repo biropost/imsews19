@@ -12,3 +12,6 @@
 */
 
 Route::get('/', 'HomeController@home');
+Route::get('/usecase2', 'UseCase2Controller@home');
+Route::get('/usecase3', 'UseCase3Controller@home');
+Route::get('/usecase4', 'UseCase4Controller@home');

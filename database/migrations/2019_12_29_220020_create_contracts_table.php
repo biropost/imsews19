@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePlayerPerformancesTable extends Migration
+class CreateContractsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,14 @@ class CreatePlayerPerformancesTable extends Migration
      */
     public function up()
     {
-        Schema::create('player_performances', function (Blueprint $table) {
+        Schema::create('contracts', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->integer('pts');
-            $table->integer('reb');
-            $table->integer('ast');
-            $table->integer('blocks');
-            $table->integer('tos');
-            $table->integer('fga');
-            $table->integer('fgm');
+            $table->string('type');
+            $table->integer('salary');
             $table->unsignedBigInteger('player_id');
+            $table->unsignedBigInteger('team_id');
+            $table->foreign('team_id')->references('id')->on('teams');
             $table->foreign('player_id')->references('id')->on('players');
         });
     }
@@ -35,6 +32,6 @@ class CreatePlayerPerformancesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('player_performances');
+        Schema::dropIfExists('contracts');
     }
 }

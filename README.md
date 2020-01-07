@@ -7,6 +7,26 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+# Shell Commands
+
+## In this order...
+```shell script
+composer install
+# make .env file from example
+php artisan key:generate
+docker-compose up --build
+```
+new terminal - connect to db
+```
+sudo docker exec -it imsews19 /bin/bash
+php artisan migrate
+php artisan db:seed
+```
+Open https page
+https://localhost:8443/
+
+# In Detail
+
 ## Using composer
 ```shell script
 composer install
@@ -43,6 +63,8 @@ This is required for all `php artisan` commands.
 
 ```shell script
 php artisan migrate
+# overwrite existing databases
+php artisan migrate:fresh
 ```
 
 ## Seed the Database
@@ -66,15 +88,19 @@ https://localhost:8443/
 copy the env.example file and adapt it to your environment.
 The env_billie_example file was used by me and serves as another example .env file for this project.
 
-## errors while serving
+## errors while serving, seeding, migrating and fixes
 ### the storage folder
-Should no longer be an issue but an alternative fix is:
 ```shell script
 The stream or file "/var/www/html/imsews19/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied
 ```
 ```shell script
 sudo chown -R $USER:www-data storage
 chmod -R 775 storage
+```
+### mapping errors
+in case of mapping errors (when you changed some migrations)
+```shell script
+composer dump-autoload
 ```
 # Information about Laravel
 

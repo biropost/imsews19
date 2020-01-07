@@ -1,7 +1,7 @@
 <?php
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-class PlayerSeeder extends Seeder
+class RefereeSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -103,26 +103,18 @@ class PlayerSeeder extends Seeder
             'Leonard',
             'Derozan',
         ];
-        $positions = ['PG', 'SG', 'SF', 'PF', 'C'];
         $firstNamesCount = count($firstNames);
         $lastNamesCount = count($lastNames);
-        $positionsCount = count($positions);
         $teams = DB::table('teams')->select('id')->get();
-        $sponsors = DB::table('sponsors')->select('id')->get();
         foreach ($teams as $team) {
             for ($i = 0; $i < 50; $i++) {
-                $player = new \App\Player([
+                $referee = new \App\Referee([
                     'first_name' => $firstNames[random_int(0, $firstNamesCount-1)],
                     'last_name' => $lastNames[random_int(0, $lastNamesCount-1)],
-                    'position' => $positions[random_int(0, $positionsCount-1)],
-                    'height' => random_int(180, 220),
-                    'weight' => random_int(70, 130),
-                    'number' => random_int(0, 99),
-                    'team_id' => $team->id,
-                    'sponsor_id' => $sponsors[random_int(0,count($sponsors)-1)]->id,
+                    'salary' => random_int(50000, 80000),
                 ]);
                 try {
-                    $player->save();
+                    $referee->save();
                 } catch (Illuminate\Database\QueryException $e) {
                     continue;
                 }

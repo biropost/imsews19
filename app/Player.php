@@ -28,11 +28,9 @@ class Player extends Model
     {
         return $this->belongsTo(Team::class);
     }
-    /**
-     * Get the Performances of the Player.
-     */
-    public function performances()
+
+    public function sponsor()
     {
-        return $this->hasMany(PlayerPerformance::class);
+        return $this->belongsTo(Sponsor::class);
     }
 }

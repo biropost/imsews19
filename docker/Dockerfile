@@ -23,4 +23,5 @@ RUN openssl req -x509 -out /etc/ssl/certs/localhost.crt -keyout /etc/ssl/private
 COPY vhost.conf /etc/apache2/sites-available/000-default.conf
 
 #RUN mkdir /var/www/html/imsews19/public && chown -R www-data:www-data /var/www/html/imsews19 && a2enmod rewrite
-RUN chown -R www-data:www-data /var/www/html/imsews19
+# need to give ownership permissions
+#RUN chown -R www-data:www-data /var/www/html/imsews19
