@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93d15b22-7077-4da7-b633-c4051780428c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/env_billie_example.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +168,10 @@
       <workItem from="1576604337121" duration="4301000" />
       <workItem from="1577465566331" duration="18881000" />
       <workItem from="1578081225440" duration="3513000" />
-      <workItem from="1578145724069" duration="1795000" />
+      <workItem from="1578145724069" duration="2108000" />
+      <workItem from="1578226067434" duration="7000" />
+      <workItem from="1578308763444" duration="491000" />
+      <workItem from="1578395782496" duration="370000" />
     </task>
     <servers />
   </component>
@@ -220,10 +219,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="498" height="446" key="SwitcherDM/67.27.1853.1053@67.27.1853.1053" timestamp="1576606258910" />
-    <state x="603" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1578145724114">
+    <state x="603" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1578395782816">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="603" y="380" key="com.intellij.ide.util.TipDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1578145724114" />
+    <state x="603" y="380" key="com.intellij.ide.util.TipDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1578395782816" />
     <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1577465569864" />
     <state x="1099" y="213" width="662" height="678" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1578144235345">
       <screen x="0" y="27" width="1920" height="1053" />
