@@ -22,19 +22,9 @@
     <body>
     <div class="container">
         <br>
-        <h1>NBA</h1>
+        <h1>NBA - Players</h1>
         <hr>
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Use-Cases
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="/">Use-Case 1 - Players in a Team</a>
-                <a class="dropdown-item" href="/usecase2">Use-Case 2 - Players and their Sponsors</a>
-                <a class="dropdown-item" href="/usecase3">Use-Case 3 - Teams playing Games (main use-case)</a>
-                <a class="dropdown-item" href="/usecase4">Use-Case 4 - Teamperformances in Games (reporting)</a>
-            </div>
-        </div>
+        @include('usecase-dropdown')
         <br>
         <br>
             <form id='searchform' method='get'>

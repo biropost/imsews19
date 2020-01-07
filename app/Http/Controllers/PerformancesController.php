@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Player;
-use App\Team;
+use App\TeamPerformance;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
-class UseCase3Controller extends Controller
+class PerformancesController extends Controller
 {
     /**
      * @param Request $request
@@ -17,11 +17,11 @@ class UseCase3Controller extends Controller
     public function home(Request $request)
     {
         if ($request->has('search')) {
-            $teams = Team::where('id', $request->get('search'))->get();
+            $performances = TeamPerformance::where('id', $request->get('search'))->get();
         } else {
-            $teams = Team::all();
+            $performances = TeamPerformance::all();
         }
 
-        return view('usecase3', ['teams' => $teams]);
+        return view('performances', ['performances' => $performances]);
     }
 }

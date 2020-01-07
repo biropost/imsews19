@@ -7,7 +7,7 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
-class UseCase2Controller extends Controller
+class PlayersController extends Controller
 {
     /**
      * @param Request $request
@@ -16,11 +16,11 @@ class UseCase2Controller extends Controller
     public function home(Request $request)
     {
         if ($request->has('search')) {
-            $players = Player::where('sponsor_id', $request->get('search'))->get();
+            $players = Player::where('team_id', $request->get('search'))->get();
         } else {
             $players = Player::all();
         }
 
-        return view('usecase2', ['players' => $players]);
+        return view('players', ['players' => $players]);
     }
 }

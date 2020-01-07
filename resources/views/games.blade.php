@@ -22,25 +22,15 @@
 <body>
 <div class="container">
     <br>
-    <h1>NBA</h1>
+    <h1>NBA - Games</h1>
     <hr>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Use-Cases
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="/">Use-Case 1 - Players in a Team</a>
-            <a class="dropdown-item" href="/usecase2">Use-Case 2 - Players and their Sponsors</a>
-            <a class="dropdown-item" href="/usecase3">Use-Case 3 - Teams playing Games (main use-case)</a>
-            <a class="dropdown-item" href="/usecase4">Use-Case 4 - Teamperformances in Games (reporting)</a>
-        </div>
-    </div>
+    @include('usecase-dropdown')
     <br>
     <br>
     <form id='searchform' method='get'>
         <div class="form-group row">
-            <a class="col-2" href='/usecase4'>Alle Performances</a>
-            <label class="col-3" for="search">Suche nach Performance ID:</label>
+            <a class="col-2" href='/usecase3'>Alle Games</a>
+            <label class="col-3" for="search">Suche nach Game ID:</label>
             <input id='search' class="form-control col-5" name='search' type='text' size='20' value='<?php if (isset($_GET['search'])) echo $_GET['search']; ?>' />
             <div class="col-1">
                 <input id='submit' class="btn btn-primary" type='submit' value='Los!' />
@@ -53,21 +43,21 @@
         <table class="table">
             <thead>
             <tr>
-                <th>Performance ID</th>
-                <th>Team</th>
-                <th>Punkte</th>
-                <th>Assists</th>
-                <th>Rebounds</th>
+                <th>name</th>
+                <th>home court</th>
+                <th>head coach</th>
+                <th>founding year</th>
+                <th>team id</th>
             </tr>
             </thead>
             <tbody>
-            @foreach($performances as $performance)
+            @foreach($teams as $team)
                 <tr>
-                    <td>{{ $performance->id}}</td>
-                    <td>{{ $performance->team_id}}</td>
-                    <td>{{ $performance->pts}}</td>
-                    <td>{{ $performance->ast}}</td>
-                    <td>{{ $performance->reb}}</td>
+                    <td>{{ $team->name }}</td>
+                    <td>{{ $team->home_court}}</td>
+                    <td>{{ $team->head_coach }}</td>
+                    <td>{{ $team->founding_year }}</td>
+                    <td>{{ $team->id }}</td>
                 </tr>
             @endforeach
             </tbody>

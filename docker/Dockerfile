@@ -24,4 +24,4 @@ COPY vhost.conf /etc/apache2/sites-available/000-default.conf
 
 #RUN mkdir /var/www/html/imsews19/public && chown -R www-data:www-data /var/www/html/imsews19 && a2enmod rewrite
 # need to give ownership permissions
-#RUN chown -R www-data:www-data /var/www/html/imsews19
+RUN mkdir /var/www/html/imsews19 && chown -R www-data:www-data /var/www/html/imsews19

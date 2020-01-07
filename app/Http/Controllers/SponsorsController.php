@@ -3,12 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Player;
-use App\TeamPerformance;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
-class UseCase4Controller extends Controller
+class SponsorsController extends Controller
 {
     /**
      * @param Request $request
@@ -17,11 +16,11 @@ class UseCase4Controller extends Controller
     public function home(Request $request)
     {
         if ($request->has('search')) {
-            $performances = TeamPerformance::where('id', $request->get('search'))->get();
+            $players = Player::where('sponsor_id', $request->get('search'))->get();
         } else {
-            $performances = TeamPerformance::all();
+            $players = Player::all();
         }
 
-        return view('usecase4', ['performances' => $performances]);
+        return view('sponsors', ['players' => $players]);
     }
 }

@@ -11,7 +11,11 @@
 |
 */
 
-Route::get('/', 'HomeController@home');
-Route::get('/usecase2', 'UseCase2Controller@home');
-Route::get('/usecase3', 'UseCase3Controller@home');
-Route::get('/usecase4', 'UseCase4Controller@home');
+Route::get('/', function () {
+    return redirect('games');
+});
+
+Route::get('/players', 'PlayersController@home');
+Route::get('/sponsors', 'SponsorsController@home');
+Route::get('/games', 'GamesController@home');
+Route::get('/performances', 'PerformancesController@home');

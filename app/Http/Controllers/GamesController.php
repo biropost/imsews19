@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Player;
+use App\Team;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
-class HomeController extends Controller
+class GamesController extends Controller
 {
     /**
      * @param Request $request
@@ -16,11 +17,11 @@ class HomeController extends Controller
     public function home(Request $request)
     {
         if ($request->has('search')) {
-            $players = Player::where('team_id', $request->get('search'))->get();
+            $teams = Team::where('id', $request->get('search'))->get();
         } else {
-            $players = Player::all();
+            $teams = Team::all();
         }
 
-        return view('welcome', ['players' => $players]);
+        return view('games', ['teams' => $teams]);
     }
 }
